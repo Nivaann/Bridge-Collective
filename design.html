@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="design.css"> 
+</head>
+<body>
+<nav>
+    <ul>
+        <li>
+            <a href="#">Bridge Collective</a>
+        </li>
+    </ul>
+
+   <a href="#" style="font-size: 30px; margin-right: 60px;"  id="menuToggle">&equals;</a>
+</nav>
+
+<div id="sideMenu">
+    <a href="about.html">About</a>
+    <a href="work.html">Our Work</a>
+    <a href="partners.html">Partners</a>
+    <a href="report.html">Annual Report</a>
+    <a href="donate.html">Donate</a>
+</div>
+ 
+<div id="parent">
+    <div class="template">
+        <p style="font-size: 45px;"> A classroom for <br> every child </p>
+        <p style="font-size: 15px; line-height: 20px; "> We fund the schools,train the teachers and <br> measure what works so every child we reach <br> becomes a graduate tomorrow</p>
+    </div>
+
+<div class="content">
+ 
+ <div class="child"> 
+    <a href="#">
+ 
+    <p style="font-size: 30px;"> 
+      &#10023;
+    </p>
+
+     <p style="align-self: last baseline; line-height: 20px"> <b> Students reached </b> <br>
+         Across 31 countries since 2011
+    </p>
+
+    <p style="font-size: 30px;"> 2.4M</p>
+    </a>
+
+   
+    
+    
+       
+ </div>
+
+ <div class="child1">
+   <a href="#" style="height: 100%;
+   width: 100%;"> 
+   <p style="margin-left: 30px; font-size: 30px;"> &plus; </p> 
+
+   <p style="align-self: last baseline; line-height: 20px;
+  "> <b> Schools partnered </b> <br> 
+   in 14 countries.From Kenya to Guatemala 
+ </p>
+
+  <p style="margin-right: 30px; font-size: 30px;"> 1,284</p>
+
+   </a>
+ </div>
+
+ <div class="child2">
+  <a href="#" style="height: 100%;
+  width: 100%;"> 
+
+  <p style="margin-left: 30px;font-size: 30px;"> &RightArrow;</p>
+  <p style="align-self: last baseline; width: 100vw;"> <b>  Teachers Trained <br> </b>
+    Equipped with modern tools and methodology </p>
+
+  <p style="margin-right: 30px;font-size: 30px; "> 38K </p>
+
+  </a>
+ </div>
+
+ <div class="child3">
+  <a href="#" style="height: 100%;
+  width: 100%;">
+  
+  <p style="font-size: 30px;margin-left: 30px;height:30px;transform: rotate(-115deg) rotateY(180deg);"> &#8623;</p>
+
+  <p style="line-height: 20px; align-self: last baseline;"> <b> Graduation Lift </b> <br>Partnered schools outperform national average 3×</p>
+
+  <p style="margin-right: 30px; font-size: 30px;"> 3.1×  </p>
+</a>
+ </div>
+
+</div>
+
+
+    <footer> 
+       <p style="font-size: 15px;">&copy; 2026 Bridge Collective  </p>
+       <p style="margin-right: 50px;"> Registered charity 12345678</p>
+
+        
+
+    </footer>
+
+    <script>
+    const menuToggle = document.getElementById("menuToggle");
+
+    menuToggle.addEventListener("click", function() {
+
+        document.body.classList.toggle("menu-open");
+
+        if (document.body.classList.contains("menu-open")) {
+            menuToggle.textContent = "×";
+        } else {
+            menuToggle.textContent = "☰";
+        }
+
+    });
+</script>
+
+</body>
+</html>
