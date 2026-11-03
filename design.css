@@ -1,0 +1,218 @@
+body{background-color: blue;}
+
+nav{height: 30px;
+width: 100vw;
+display: flex;
+justify-content: space-between;
+color: white;
+align-items: center;}
+
+a{color: white;
+text-decoration: none;}
+
+p{color: white;
+border: none;}
+
+li{font-size: 15px;}
+
+footer{position: absolute;
+bottom: 0px;
+height: 5
+120px;
+width: 100vw;
+justify-content: space-between;
+display: flex;
+align-items: center;}
+
+#parent{height: 400px;
+width: 100vw;
+display: flex;
+border-top: 2px solid rgba(255,255,255,0.4);
+border-bottom: 2px solid rgba(255,255,255,0.4);
+flex-direction: row;}
+
+
+.content{height: 400px;
+width: 60%;
+display: flex;
+border: 1px solid rgba(255,255,255,0.4);
+border-bottom: none;
+justify-content: space-evenly;
+flex-wrap: wrap;
+flex-direction: row;}
+.template{
+    height: 400px;
+    width: 40%;
+    border-right:1.5px solid rgba(255,255,255,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.template p{
+    align-self: center;
+    
+}
+
+.child{height: 50%;
+width: 50%;
+ border: 1px solid rgba(255,255,255,0.4);
+ border-top: none;
+display: flex;}
+
+.child a{height: 100%;
+width: 100%;
+display: flex;
+justify-content: space-evenly;}
+
+/* animation code */
+.child a:hover{
+  background-color: rgba(255,255,255,0.5);
+}
+
+.child1{height: 50%;
+width: 40%; 
+border: 1px solid rgba(255,255,255,0.4);
+border-top: none;
+flex-grow: 2;}
+
+.child1 a{display: flex;
+justify-content: space-evenly;}
+
+/* animation code */
+
+.child1 a:hover {background-color: rgba(255,255,255,0.5);}
+
+.child2{height: 50%;
+width: 50%; border: 1px solid rgba(255,255,255,0.5);
+border-bottom: none;}
+
+.child2 a{display: flex;
+justify-content: space-evenly;}
+
+/* animation code */
+
+.child2 a:hover{background-color: rgba(255,255,255,0.5);}
+
+.child3{height: 50%;width: 40%;
+   border: 1px solid rgba(255,255,255,0.4);
+   border-bottom: none;
+flex-grow: 2;}
+
+.child3 a{display: flex;
+justify-content: space-evenly;}
+
+/* animation code */
+
+.child3 a:hover{background-color: rgba(255,255,255,0.5);}
+
+ /* active effect  */
+
+
+nav {
+    position: relative;
+    z-index: 10;
+}
+
+#menuToggle {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+#sideMenu {
+    position: fixed;
+    top: 72px;
+    right: 0;
+
+    width: 28vw;
+    height: calc(100vh - 72px);
+
+    background-color: blue;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 45px;
+    gap: 12px;
+
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+
+    z-index: 5;
+}
+
+#sideMenu a {
+    font-size: 30px;
+}
+
+body.menu-open #sideMenu {
+    transform: translateX(0);
+}
+
+/* Main layout when menu is open */
+
+body.menu-open #parent {
+    width: 72vw;
+    transition: width 0.4s ease;
+}
+
+body.menu-open .template {
+    width: 62%;
+    transition: width 0.4s ease;
+}
+
+body.menu-open .content {
+    width: 38%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    transition: width 0.4s ease;
+}
+
+/* Display only two statistics */
+
+body.menu-open .child,
+body.menu-open .child2 {
+    width: 100%;
+    height: 50%;
+    flex-shrink: 0;
+}
+
+body.menu-open .child1,
+body.menu-open .child3 {
+    display: none;
+}
+
+/* Adjust footer */
+
+footer {
+    transition: width 0.4s ease;
+}
+
+body.menu-open footer {
+    width: 72vw;
+}
+
+body {
+    margin: 0;
+    background-color: blue;
+}
+
+nav {
+    height: 72px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+#parent {
+    transition: width 0.4s ease;
+}
